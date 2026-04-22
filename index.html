@@ -194,8 +194,8 @@ a { text-decoration: none; }
 /* ── PRICING ── */
 #pricing { background: var(--cream); padding: 108px 24px; }
 .pricing-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 3px;
+  max-width: 820px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px;
 }
 .pricing-card {
   background: #fff; padding: 44px 36px; position: relative;
@@ -319,6 +319,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
   .gallery-cell { grid-column: span 1 !important; grid-row: span 1 !important; }
   .stats { gap: 24px; }
   .stat-num { font-size: 36px; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 </style>
 </head>
@@ -332,7 +333,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
       <a href="#about">About</a>
       <a href="#sessions">Sessions</a>
       <a href="#gallery">Gallery</a>
-      <a href="#pricing">Investment</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
       <a href="#contact" class="btn-book">Book Now</a>
     </div>
@@ -487,7 +488,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
 <section id="pricing">
   <div style="max-width:1100px;margin:0 auto">
     <div class="section-center">
-      <p class="section-eyebrow">Investment</p>
+      <p class="section-eyebrow">Pricing</p>
       <h2 class="section-title" style="margin-bottom:16px">Simple, transparent pricing</h2>
       <p style="font-family:var(--sans);font-size:16px;color:#6b5a50;font-weight:300">Introductory pricing. All packages include an online gallery and personal print license.</p>
     </div>
