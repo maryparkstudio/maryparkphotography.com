@@ -327,7 +327,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Mary Park Photography</a>
+    <a href="#hero" class="nav-logo"><img src="MARY PARK PHOTO LOGO.svg" alt="Mary Park Photography" style="height:38px;width:auto;display:block;filter:brightness(0) invert(1);transition:filter .3s;" id="nav-logo-img" /></a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#sessions">Sessions</a>
@@ -648,7 +648,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Mary Park Photography</div>
+  <div class="footer-logo"><img src="MARY PARK PHOTO LOGO.svg" alt="Mary Park Photography" style="height:44px;width:auto;filter:brightness(0) invert(1);opacity:.85;" /></div>
   <p class="footer-sub">Family · Newborn · Lifestyle Photography</p>
   <div class="footer-links">
     <a href="#">Instagram</a>
@@ -663,7 +663,10 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
 <script>
 // Scrolled nav
 window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+  const scrolled = window.scrollY > 40;
+  document.getElementById('nav').classList.toggle('scrolled', scrolled);
+  const logo = document.getElementById('nav-logo-img');
+  if (logo) logo.style.filter = scrolled ? 'none' : 'brightness(0) invert(1)';
 });
 
 // Footer year
