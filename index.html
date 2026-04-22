@@ -257,6 +257,11 @@ a { text-decoration: none; }
 .yelp-note { margin-top: 32px; font-family: var(--sans); font-size: 13px; color: rgba(255,255,255,.55); }
 .yelp-note a { color: rgba(255,255,255,.75); text-decoration: underline; text-underline-offset: 3px; }
 
+/* ── BOOKING ── */
+#booking { background: var(--cream); padding: 108px 24px; }
+.booking-wrap { max-width: 900px; margin: 0 auto; }
+.calendly-inline-widget { border-radius: 0; overflow: hidden; }
+
 /* ── CONTACT ── */
 #contact { background: #fff; padding: 108px 24px; }
 .contact-wrap { max-width: 860px; margin: 0 auto; }
@@ -351,8 +356,9 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
       <a href="#sessions">Sessions</a>
       <a href="#gallery">Gallery</a>
       <a href="#pricing">Pricing</a>
+      <a href="#booking">Book</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="btn-book">Book Now</a>
+      <a href="#booking" class="btn-book">Book Now</a>
     </div>
   </div>
 </nav>
@@ -366,7 +372,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
     <h1 class="hero-h1">Stories worth<br><em>holding onto.</em></h1>
     <p class="hero-sub">Warm, authentic photography for families, newborns,<br>milestones, engagements &amp; events — serving Downey, Los Angeles &amp; surrounding areas.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Book a Session</a>
+      <a href="#booking" class="btn-primary">Book a Session</a>
       <a href="#gallery" class="btn-outline">View Gallery</a>
     </div>
   </div>
@@ -422,7 +428,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
         <div class="session-overlay">
           <h3>Family Sessions</h3>
           <p>Authentic, joyful moments that capture the love and chaos of your family exactly as it is right now.</p>
-          <a href="#contact">Book This Session</a>
+          <a href="#booking">Book This Session</a>
         </div>
       </div>
       <div class="session-card">
@@ -435,7 +441,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
         <div class="session-overlay">
           <h3>Newborn &amp; Baby</h3>
           <p>Those first fleeting days and months. Tiny fingers, sleepy stretches, and the purest kind of love.</p>
-          <a href="#contact">Book This Session</a>
+          <a href="#booking">Book This Session</a>
         </div>
       </div>
       <div class="session-card">
@@ -448,7 +454,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
         <div class="session-overlay">
           <h3>Milestone Sessions</h3>
           <p>Sitter, cake smash, first birthday. Every milestone deserves to be remembered beautifully.</p>
-          <a href="#contact">Book This Session</a>
+          <a href="#booking">Book This Session</a>
         </div>
       </div>
       <div class="session-card">
@@ -461,7 +467,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
         <div class="session-overlay">
           <h3>Engagements</h3>
           <p>Relaxed, romantic sessions that celebrate your story before the big day.</p>
-          <a href="#contact">Book This Session</a>
+          <a href="#booking">Book This Session</a>
         </div>
       </div>
     </div>
@@ -520,7 +526,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
           <li>Online gallery</li>
           <li>Personal print license</li>
         </ul>
-        <a href="#contact" class="btn-inquire">Inquire Now</a>
+        <a href="#booking" class="btn-inquire">Book Now</a>
       </div>
       <div class="pricing-card highlight">
         <div class="pricing-badge">Most Popular</div>
@@ -534,7 +540,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
           <li>Personal print license</li>
           <li>Outfit guidance</li>
         </ul>
-        <a href="#contact" class="btn-inquire">Inquire Now</a>
+        <a href="#booking" class="btn-inquire">Book Now</a>
       </div>
       <div class="pricing-card">
         <p class="pricing-name">Newborn Collection</p>
@@ -548,7 +554,7 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
           <li>Outfit guidance</li>
           <li>Prop styling included</li>
         </ul>
-        <a href="#contact" class="btn-inquire">Inquire Now</a>
+        <a href="#booking" class="btn-inquire">Book Now</a>
       </div>
     </div>
   </div>
@@ -568,8 +574,21 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
       <span class="booking-pill">Engagements</span>
       <span class="booking-pill">Events &amp; Birthdays</span>
     </div>
-    <a href="#contact" class="btn-light">Reserve Your Spot</a>
+    <a href="#booking" class="btn-light">Reserve Your Spot</a>
     <p class="yelp-note">Find me on <a href="https://www.yelp.com/biz/mary-park-photography-downey?osq=mary+park+photography&override_cta=Get+pricing" target="_blank" rel="noopener">Yelp</a></p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-wrap">
+    <div class="section-center">
+      <p class="section-eyebrow">Book a Session</p>
+      <h2 class="section-title" style="margin-bottom:16px">Pick a time that works for you</h2>
+      <p style="font-family:var(--sans);font-size:16px;color:#6b5a50;font-weight:300;margin-bottom:48px">Schedule a free 30-minute consultation and we'll talk through your vision, session type, and any questions you have.</p>
+    </div>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/maryparkstudio/30min?hide_gdpr_banner=1&primary_color=c9897a" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 </section>
 
