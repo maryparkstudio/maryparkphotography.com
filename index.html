@@ -316,6 +316,28 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
 .footer-rule { width: 40px; height: 1px; background: rgba(255,255,255,.12); margin: 0 auto 24px; }
 .footer-copy { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,.22); }
 
+/* ── POLICY MODAL ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(44,32,25,.72); backdrop-filter: blur(4px);
+  align-items: center; justify-content: center; padding: 24px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: var(--cream); max-width: 640px; width: 100%;
+  max-height: 88vh; overflow-y: auto; padding: 52px 48px;
+  position: relative;
+}
+.modal-close {
+  position: absolute; top: 20px; right: 24px;
+  font-family: var(--sans); font-size: 22px; color: var(--warm-brown);
+  background: none; border: none; cursor: pointer; line-height: 1;
+}
+.modal-box h2 { font-family: var(--serif); font-size: 32px; color: var(--dark); font-weight: 400; margin-bottom: 28px; }
+.modal-box h3 { font-family: var(--serif); font-size: 20px; color: var(--warm-brown); font-weight: 400; margin: 28px 0 10px; }
+.modal-box p { font-family: var(--sans); font-size: 15px; color: #6b5a50; line-height: 1.82; font-weight: 300; margin-bottom: 8px; }
+.modal-box .policy-note { font-family: var(--sans); font-size: 13px; color: var(--dusty-rose); margin-top: 28px; font-style: italic; }
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
@@ -688,8 +710,35 @@ footer { background: var(--dark); padding: 64px 24px 40px; text-align: center; }
     <a href="https://www.yelp.com/biz/mary-park-photography-downey?osq=mary+park+photography&override_cta=Get+pricing" target="_blank" rel="noopener">Yelp</a>
   </div>
   <div class="footer-rule"></div>
+  <p style="margin-bottom:16px">
+    <button onclick="document.getElementById('policy-modal').classList.add('open')" style="font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.32);background:none;border:none;cursor:pointer;transition:color .2s;" onmouseover="this.style.color='rgba(232,196,184,.7)'" onmouseout="this.style.color='rgba(255,255,255,.32)'">Cancellation Policy</button>
+  </p>
   <p class="footer-copy" id="footer-year"></p>
 </footer>
+
+<!-- CANCELLATION POLICY MODAL -->
+<div class="modal-overlay" id="policy-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="document.getElementById('policy-modal').classList.remove('open')">✕</button>
+    <h2>Cancellation &amp; Rescheduling Policy</h2>
+    <p>A non-refundable retainer (security deposit) is required to secure your session date and time. Your booking is not confirmed until this payment is received.</p>
+
+    <h3>Cancellations</h3>
+    <p>If you need to cancel your session, please notify me as soon as possible. The retainer is non-refundable, as it reserves your time slot and may prevent other bookings.</p>
+
+    <h3>Rescheduling</h3>
+    <p>You may reschedule your session one time with at least 48 hours' notice, and your retainer will be applied to the new date. Rescheduled sessions must take place within 30 days of the original booking date.</p>
+    <p>Requests made with less than 48 hours' notice may require a new retainer to secure a new date.</p>
+
+    <h3>No-Shows</h3>
+    <p>Clients who do not show up for their scheduled session without notice will forfeit their retainer and will need to book a new session with a new deposit.</p>
+
+    <h3>Late Arrivals</h3>
+    <p>Please arrive on time. Late arrivals may result in a shortened session to avoid impacting other scheduled clients.</p>
+
+    <p class="policy-note">By booking a session, you agree to these terms.</p>
+  </div>
+</div>
 
 <script>
 // Scrolled nav
